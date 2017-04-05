@@ -11,7 +11,7 @@ namespace SenseHatSimulator
     class Program
     {
         static DeviceClient raspberryPi;
-        static string iotHubUri = "tm-iot-hub-free.azure-devices.net";
+        static string iotHubUri = "<IoT Hub Name>.azure-devices.net";
 
         static void Main(string[] args)
         {
