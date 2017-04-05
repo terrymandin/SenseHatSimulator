@@ -16,11 +16,11 @@ namespace SenseHatSimulator
         static void Main(string[] args)
         {
             Console.WriteLine("Simulated device\n");
-            raspberryPi = DeviceClient.Create(iotHubUri, new DeviceAuthenticationWithRegistrySymmetricKey("HackathonDevice", "OW5BIzeIYAoKYqKj0bR4iqM0ehKfcxk/tMZsRbBR+KU="), TransportType.Amqp);
+            raspberryPi = DeviceClient.Create(iotHubUri, new DeviceAuthenticationWithRegistrySymmetricKey("<Device Name>", "<Device Key>"), TransportType.Amqp);
             DeviceContext raspberryPiContext = new DeviceContext() { temperature = 0 };
             while (true)
             {
-                SendDeviceToCloudMessagesAsync("RaspberryPi", raspberryPi, 49.171402, -124.005349, raspberryPiContext);
+                SendDeviceToCloudMessagesAsync("<Device Name>", raspberryPi, 49.171402, -124.005349, raspberryPiContext);
                 Task.Delay(1000).Wait();
             }
         }
